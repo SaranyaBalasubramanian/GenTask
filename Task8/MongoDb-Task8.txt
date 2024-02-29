@@ -1,0 +1,277 @@
+db.createCollection("ZenClass");
+db.ZenClass.insertMany([{users : "saranya",
+			codekata: 5,
+			attendance : 10,
+			topics : "java",
+			tasks  : "java",
+			company_drivers :"15-Aug-2020",
+			mentor : "John"},
+			{users : "sudha",
+			codekata: 8,
+			attendance : 9,
+			topics : "java advance",
+			tasks  : "java advance",
+			company_drivers :"18-Sep-2020",
+			mentor : "ken"},
+			{users : "harrish",
+			codekata: 9,
+			attendance : 10,
+			topics : "java core",
+			tasks  : "java core",
+			company_drivers :"17-0ct-2020",
+			mentor : "peter"},
+			{users : "harrish",
+			codekata: 9,
+			attendance : 10,
+			topics : "HTML",
+			tasks  : "HTML",
+			company_drivers :"19-0ct-2020",
+			mentor : "karthick"},
+			{users : "Sarvesh",
+			codekata: 4,
+			attendance : 6,
+			topics : "CSS",
+			tasks  : "CSS",
+			company_drivers :"24-0ct-2020",
+			mentor : "chellam"},
+			{users : "Anitha",
+			codekata: 2,
+			attendance : 3,
+			topics : "jS",
+			tasks  : "JS",
+			company_drivers :"25-0ct-2020",
+			mentor : "Joe"},
+			{users : "Kavitha",
+			codekata: 7,
+			attendance : 10,
+			topics : "bootcamp",
+			tasks  : "bootcamp",
+			company_drivers :"30-0ct-2020",
+			mentor : "keto"},
+			{users : "Rio",
+			codekata: 1,
+			attendance : 9,
+			topics : "Mongo DB",
+			tasks  : "Mongo DB",
+			company_drivers :"30-0ct-2020",
+			mentor : "keto"},
+			{users : "Rio",
+			codekata: 6,
+			attendance : 8,
+			topics : "MySQL",
+			tasks  : "MySQL",
+			company_drivers :"10-0ct-2020",
+			mentor : "Ro"}
+			
+			
+	]);
+
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('65e0779f534c3b64096905b6'),
+    '1': ObjectId('65e0779f534c3b64096905b7'),
+    '2': ObjectId('65e0779f534c3b64096905b8'),
+    '3': ObjectId('65e0779f534c3b64096905b9'),
+    '4': ObjectId('65e0779f534c3b64096905ba'),
+    '5': ObjectId('65e0779f534c3b64096905bb'),
+    '6': ObjectId('65e0779f534c3b64096905bc'),
+    '7': ObjectId('65e0779f534c3b64096905bd'),
+    '8': ObjectId('65e0779f534c3b64096905be')
+  }
+}
+db.ZenClass.find()
+[
+  {
+    _id: ObjectId('65e0779f534c3b64096905b6'),
+    users: 'saranya',
+    codekata: 5,
+    attendance: 10,
+    topics: 'java',
+    tasks: 'java',
+    company_drivers: '15-Aug-2020',
+    mentor: 'John'
+  },
+  {
+    _id: ObjectId('65e0779f534c3b64096905b7'),
+    users: 'sudha',
+    codekata: 8,
+    attendance: 9,
+    topics: 'java advance',
+    tasks: 'java advance',
+    company_drivers: '18-Sep-2020',
+    mentor: 'ken'
+  },
+  {
+    _id: ObjectId('65e0779f534c3b64096905b8'),
+    users: 'harrish',
+    codekata: 9,
+    attendance: 10,
+    topics: 'java core',
+    tasks: 'java core',
+    company_drivers: '17-0ct-2020',
+    mentor: 'peter'
+  },
+  {
+    _id: ObjectId('65e0779f534c3b64096905b9'),
+    users: 'harrish',
+    codekata: 9,
+    attendance: 10,
+    topics: 'HTML',
+    tasks: 'HTML',
+    company_drivers: '19-0ct-2020',
+    mentor: 'karthick'
+  },
+  {
+    _id: ObjectId('65e0779f534c3b64096905ba'),
+    users: 'Sarvesh',
+    codekata: 4,
+    attendance: 6,
+    topics: 'CSS',
+    tasks: 'CSS',
+    company_drivers: '24-0ct-2020',
+    mentor: 'chellam'
+  },
+  {
+    _id: ObjectId('65e0779f534c3b64096905bb'),
+    users: 'Anitha',
+    codekata: 2,
+    attendance: 3,
+    topics: 'jS',
+    tasks: 'JS',
+    company_drivers: '25-0ct-2020',
+    mentor: 'Joe'
+  },
+  {
+    _id: ObjectId('65e0779f534c3b64096905bc'),
+    users: 'Kavitha',
+    codekata: 7,
+    attendance: 10,
+    topics: 'bootcamp',
+    tasks: 'bootcamp',
+    company_drivers: '30-0ct-2020',
+    mentor: 'keto'
+  },
+  {
+    _id: ObjectId('65e0779f534c3b64096905bd'),
+    users: 'Rio',
+    codekata: 1,
+    attendance: 9,
+    topics: 'Mongo DB',
+    tasks: 'Mongo DB',
+    company_drivers: '30-0ct-2020',
+    mentor: 'keto'
+  },
+  {
+    _id: ObjectId('65e0779f534c3b64096905be'),
+    users: 'Rio',
+    codekata: 6,
+    attendance: 8,
+    topics: 'MySQL',
+    tasks: 'MySQL',
+    company_drivers: '10-0ct-2020',
+    mentor: 'Ro'
+  }
+]
+ db.ZenClass.find({},{topics :1},{task:1},{$gt:"1-oct-2020"});
+[
+  { _id: ObjectId('65e0779f534c3b64096905b6'), topics: 'java' },
+  { _id: ObjectId('65e0779f534c3b64096905b7'), topics: 'java advance' },
+  { _id: ObjectId('65e0779f534c3b64096905b8'), topics: 'java core' },
+  { _id: ObjectId('65e0779f534c3b64096905b9'), topics: 'HTML' },
+  { _id: ObjectId('65e0779f534c3b64096905ba'), topics: 'CSS' },
+  { _id: ObjectId('65e0779f534c3b64096905bb'), topics: 'jS' },
+  { _id: ObjectId('65e0779f534c3b64096905bc'), topics: 'bootcamp' },
+  { _id: ObjectId('65e0779f534c3b64096905bd'), topics: 'Mongo DB' },
+  { _id: ObjectId('65e0779f534c3b64096905be'), topics: 'MySQL' } ]
+db.ZenClass.find({company_drivers :{$gte:"15-oct-2020",$lte:"31-oct-2020"}});
+[
+  {
+    _id: ObjectId('65e0779f534c3b64096905b7'),
+    users: 'sudha',
+    codekata: 8,
+    attendance: 9,
+    topics: 'java advance',
+    tasks: 'java advance',
+    company_drivers: '18-Sep-2020',
+    mentor: 'ken'
+  },
+  {
+    _id: ObjectId('65e0779f534c3b64096905b8'),
+    users: 'harrish',
+    codekata: 9,
+    attendance: 10,
+    topics: 'java core',
+    tasks: 'java core',
+    company_drivers: '17-0ct-2020',
+    mentor: 'peter'
+  },
+  {
+    _id: ObjectId('65e0779f534c3b64096905b9'),
+    users: 'harrish',
+    codekata: 9,
+    attendance: 10,
+    topics: 'HTML',
+    tasks: 'HTML',
+    company_drivers: '19-0ct-2020',
+    mentor: 'karthick'
+  },
+  {
+    _id: ObjectId('65e0779f534c3b64096905ba'),
+    users: 'Sarvesh',
+    codekata: 4,
+    attendance: 6,
+    topics: 'CSS',
+    tasks: 'CSS',
+    company_drivers: '24-0ct-2020',
+    mentor: 'chellam'
+  },
+  {
+    _id: ObjectId('65e0779f534c3b64096905bb'),
+    users: 'Anitha',
+    codekata: 2,
+    attendance: 3,
+    topics: 'jS',
+    tasks: 'JS',
+    company_drivers: '25-0ct-2020',
+    mentor: 'Joe'
+  },
+  {
+    _id: ObjectId('65e0779f534c3b64096905bc'),
+    users: 'Kavitha',
+    codekata: 7,
+    attendance: 10,
+    topics: 'bootcamp',
+    tasks: 'bootcamp',
+    company_drivers: '30-0ct-2020',
+    mentor: 'keto'
+  },
+  {
+    _id: ObjectId('65e0779f534c3b64096905bd'),
+    users: 'Rio',
+    codekata: 1,
+    attendance: 9,
+    topics: 'Mongo DB',
+    tasks: 'Mongo DB',
+    company_drivers: '30-0ct-2020',
+    mentor: 'keto'
+  }
+]
+db.ZenClass.find({},{codekata:1},{},{users :1});
+[
+  { _id: ObjectId('65e0779f534c3b64096905b6'), codekata: 5 },
+  { _id: ObjectId('65e0779f534c3b64096905b7'), codekata: 8 },
+  { _id: ObjectId('65e0779f534c3b64096905b8'), codekata: 9 },
+  { _id: ObjectId('65e0779f534c3b64096905b9'), codekata: 9 },
+  { _id: ObjectId('65e0779f534c3b64096905ba'), codekata: 4 },
+  { _id: ObjectId('65e0779f534c3b64096905bb'), codekata: 2 },
+  { _id: ObjectId('65e0779f534c3b64096905bc'), codekata: 7 },
+  { _id: ObjectId('65e0779f534c3b64096905bd'), codekata: 1 },
+  { _id: ObjectId('65e0779f534c3b64096905be'), codekata: 6 }
+]
+db.ZenClass.find({},{mentee_count : {$gt15}});
+db.ZenClass.find({date: {
+        $gte: ISODate("2020-10-15"),
+        $lte: ISODate("2020-10-31")},
+    "status": "Absent"
+}).count();
